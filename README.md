@@ -2,7 +2,7 @@
 
 Repositório para controle das atividades
 
-Gabriel Milanezi - 170002073
-Leandro Gabatel - 170002069
-Lucas Matheus Oliveira - 170005450
-Victor Felisbino Marques - 170005149
+ - Gabriel Milanezi - 170002073
+ - Leandro Gabatel - 170002069
+ - Lucas Matheus Oliveira - 170005450
+ - Victor Felisbino Marques - 170005149
