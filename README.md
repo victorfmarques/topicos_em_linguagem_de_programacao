@@ -10,5 +10,5 @@
 
 ### Exercícios
 
-UNISAL - Exercício do dia 19/08/2020
-UNISAL_2 - Exercício do dia 26/08/2020
+- UNISAL - Exercício do dia 19/08/2020
+- UNISAL_2 - Exercício do dia 26/08/2020
