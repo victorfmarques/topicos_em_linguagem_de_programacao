@@ -1,6 +1,6 @@
 # topicos_em_linguagem_de_programacao
 
-Repositório para controle das atividades
+### Repositório para controle das atividades
 
  - Gabriel Milanezi - 170002073
  - Leandro Gabatel - 170002069
