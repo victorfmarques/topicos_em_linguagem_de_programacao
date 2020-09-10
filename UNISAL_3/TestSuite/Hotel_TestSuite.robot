@@ -6,3 +6,4 @@ Resource  ../Functions/Hotel_Keywords.robot
 Teste hotel
     Acessar site de viagem
     Pesquisar viagem "New York"
+
