@@ -14,3 +14,4 @@
 - UNISAL_2 - Exercício do dia 26/08/2020
 - UNISAL_3 - Exercício do dia 02/09/2020
 - UNISAL_4 - Exercício do dia 09/09/2020
+- UNISAL_5 - Exercício do dia 23/09/2020
