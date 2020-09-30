@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.1 (Python 3.8.5 on win32)" generated="20200923 22:38:27.768" rpa="false">
+<suite id="s1" name="TestSuite" source="C:\temp\ws-PyCharm\topicos_em_linguagem_de_programacao\UNISAL_5\TestSuite">
+<suite id="s1-s1" name="Teste TestSuite" source="C:\temp\ws-PyCharm\topicos_em_linguagem_de_programacao\UNISAL_5\TestSuite\Teste_TestSuite.robot">
+<test id="s1-s1-t1" name="Test title">
+<kw name="GoToURL" library="Teste_Keywords">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>options=add_argument("--incognito")</arg>
+</arguments>
+<msg timestamp="20200923 22:38:27.990" level="INFO">Opening browser 'chrome' to base url 'http://automationpractice.com/index.php'.</msg>
+<status status="PASS" starttime="20200923 22:38:27.990" endtime="20200923 22:38:34.636"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200923 22:38:34.636" endtime="20200923 22:38:36.754"></status>
+</kw>
+<status status="PASS" starttime="20200923 22:38:27.989" endtime="20200923 22:38:36.755"></status>
+</kw>
+<kw name="CriaLista" library="Teste_Keywords">
+<kw name="Create List" library="BuiltIn">
+<doc>Returns a list containing given items.</doc>
+<assign>
+<var>@{LISTACOMPRA}</var>
+</assign>
+<msg timestamp="20200923 22:38:36.755" level="INFO">@{LISTACOMPRA} = [ ]</msg>
+<status status="PASS" starttime="20200923 22:38:36.755" endtime="20200923 22:38:36.755"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${LISTACOMPRA}</arg>
+</arguments>
+<msg timestamp="20200923 22:38:36.756" level="INFO">${LISTACOMPRA} = []</msg>
+<status status="PASS" starttime="20200923 22:38:36.756" endtime="20200923 22:38:36.756"></status>
+</kw>
+<status status="PASS" starttime="20200923 22:38:36.755" endtime="20200923 22:38:36.756"></status>
+</kw>
+<kw name="AddToCart" library="Teste_Keywords">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${ITEMCARD}</arg>
+</arguments>
+<status status="PASS" starttime="20200923 22:38:36.757" endtime="20200923 22:38:36.766"></status>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<arguments>
+<arg>${ITEMCARD}</arg>
+</arguments>
+<msg timestamp="20200923 22:38:36.767" level="INFO">Simulating Mouse Over on element '//*[@id="homefeatured"]/li[1]'.</msg>
+<status status="PASS" starttime="20200923 22:38:36.766" endtime="20200923 22:38:37.045"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${ADDTOCARTBUTTON}</arg>
+<arg>timeout=20.0</arg>
+</arguments>
+<status status="PASS" starttime="20200923 22:38:37.045" endtime="20200923 22:38:37.054"></status>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:${ADDTOCARTBUTTON}</arg>
+</arguments>
+<msg timestamp="20200923 22:38:37.054" level="INFO">Clicking link 'xpath://*[@id="homefeatured"]/li[1]/div/div[2]/div[2]/a[1]'.</msg>
+<status status="PASS" starttime="20200923 22:38:37.054" endtime="20200923 22:38:37.095"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>4s</arg>
+</arguments>
+<msg timestamp="20200923 22:38:41.096" level="INFO">Slept 4 seconds</msg>
+<status status="PASS" starttime="20200923 22:38:37.095" endtime="20200923 22:38:41.096"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${NOMEITEM}</arg>
+</arguments>
+<assign>
+<var>${NOMEITEM_VALUE1}</var>
+</assign>
+<msg timestamp="20200923 22:38:41.117" level="INFO">${NOMEITEM_VALUE1} = Faded Short Sleeve T-shirts</msg>
+<status status="PASS" starttime="20200923 22:38:41.096" endtime="20200923 22:38:41.117"></status>
+</kw>
+<kw name="Insert Into List" library="Collections">
+<doc>Inserts ``value`` into ``list`` to the position specified with ``index``.</doc>
+<arguments>
+<arg>${LISTACOMPRA}</arg>
+<arg>0</arg>
+<arg>${NOMEITEM_VALUE1}</arg>
+</arguments>
+<status status="PASS" starttime="20200923 22:38:41.117" endtime="20200923 22:38:41.117"></status>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:${PROCEEDTOCHECKOUT}</arg>
+</arguments>
+<msg timestamp="20200923 22:38:41.118" level="INFO">Clicking link 'xpath://a[@title='Proceed to checkout']'.</msg>
+<status status="PASS" starttime="20200923 22:38:41.117" endtime="20200923 22:38:43.524"></status>
+</kw>
+<status status="PASS" starttime="20200923 22:38:36.756" endtime="20200923 22:38:43.524"></status>
+</kw>
+<kw name="AddQty" library="Teste_Keywords">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${ADDBUTTON}</arg>
+<arg>timeout=20.0</arg>
+</arguments>
+<status status="PASS" starttime="20200923 22:38:43.525" endtime="20200923 22:38:43.535"></status>
+</kw>
+<kw name="${Qty} IN RANGE [ 4 ]" type="for">
+<kw name="${Qty} = 0" type="foritem">
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:${ADDBUTTON}</arg>
+</arguments>
+<msg timestamp="20200923 22:38:43.536" level="INFO">Clicking link 'xpath://*[@title='Add']'.</msg>
+<status status="PASS" starttime="20200923 22:38:43.536" endtime="20200923 22:38:43.577"></status>
+</kw>
+<status status="PASS" starttime="20200923 22:38:43.535" endtime="20200923 22:38:43.577"></status>
+</kw>
+<kw name="${Qty} = 1" type="foritem">
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:${ADDBUTTON}</arg>
+</arguments>
+<msg timestamp="20200923 22:38:43.578" level="INFO">Clicking link 'xpath://*[@title='Add']'.</msg>
+<status status="PASS" starttime="20200923 22:38:43.578" endtime="20200923 22:38:43.603"></status>
+</kw>
+<status status="PASS" starttime="20200923 22:38:43.577" endtime="20200923 22:38:43.604"></status>
+</kw>
+<kw name="${Qty} = 2" type="foritem">
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:${ADDBUTTON}</arg>
+</arguments>
+<msg timestamp="20200923 22:38:43.605" level="INFO">Clicking link 'xpath://*[@title='Add']'.</msg>
+<status status="PASS" starttime="20200923 22:38:43.604" endtime="20200923 22:38:43.628"></status>
+</kw>
+<status status="PASS" starttime="20200923 22:38:43.604" endtime="20200923 22:38:43.629"></status>
+</kw>
+<kw name="${Qty} = 3" type="foritem">
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:${ADDBUTTON}</arg>
+</arguments>
+<msg timestamp="20200923 22:38:43.629" level="INFO">Clicking link 'xpath://*[@title='Add']'.</msg>
+<status status="PASS" starttime="20200923 22:38:43.629" endtime="20200923 22:38:43.653"></status>
+</kw>
+<status status="PASS" starttime="20200923 22:38:43.629" endtime="20200923 22:38:43.653"></status>
+</kw>
+<status status="PASS" starttime="20200923 22:38:43.535" endtime="20200923 22:38:43.653"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20200923 22:38:48.654" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20200923 22:38:43.653" endtime="20200923 22:38:48.654"></status>
+</kw>
+<status status="PASS" starttime="20200923 22:38:43.525" endtime="20200923 22:38:48.654"></status>
+</kw>
+<kw name="ContinueShopping" library="Teste_Keywords">
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>${SHOPPING}</arg>
+</arguments>
+<msg timestamp="20200923 22:38:48.655" level="INFO">Clicking link '//a[@title='Continue shopping']'.</msg>
+<status status="PASS" starttime="20200923 22:38:48.655" endtime="20200923 22:38:51.247"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${ITEMCARD}</arg>
+</arguments>
+<status status="PASS" starttime="20200923 22:38:51.248" endtime="20200923 22:38:51.269"></status>
+</kw>
+<status status="PASS" starttime="20200923 22:38:48.654" endtime="20200923 22:38:51.269"></status>
+</kw>
+<kw name="Search &quot;Blouse&quot;" library="Teste_Keywords">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${SEARCHBAR}</arg>
+<arg>${ITEM}</arg>
+</arguments>
+<msg timestamp="20200923 22:38:51.270" level="INFO">Typing text 'Blouse' into text field '//*[@id="search_query_top"]'.</msg>
+<status status="PASS" starttime="20200923 22:38:51.270" endtime="20200923 22:38:51.333"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${SEARCHBTN}</arg>
+</arguments>
+<msg timestamp="20200923 22:38:51.333" level="INFO">Clicking element '//button[@name="submit_search"]'.</msg>
+<status status="PASS" starttime="20200923 22:38:51.333" endtime="20200923 22:38:52.895"></status>
+</kw>
+<status status="PASS" starttime="20200923 22:38:51.270" endtime="20200923 22:38:52.895"></status>
+</kw>
+<kw name="AddNewItem" library="Teste_Keywords">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${NEWITEM}</arg>
+</arguments>
+<status status="PASS" starttime="20200923 22:38:52.896" endtime="20200923 22:38:53.341"></status>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<arguments>
+<arg>${NEWITEM}</arg>
+</arguments>
+<msg timestamp="20200923 22:38:53.341" level="INFO">Simulating Mouse Over on element '//*[@id="center_column"]/ul/li/div/div[1]/div/a[1]'.</msg>
+<status status="PASS" starttime="20200923 22:38:53.341" endtime="20200923 22:38:53.610"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${ADDTOCARD}</arg>
+<arg>timeout=20.0</arg>
+</arguments>
+<status status="PASS" starttime="20200923 22:38:53.610" endtime="20200923 22:38:53.621"></status>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>${ADDTOCARD}</arg>
+</arguments>
+<msg timestamp="20200923 22:38:53.621" level="INFO">Clicking link '//*[@id="center_column"]/ul/li/div/div[2]/div[2]/a[1]'.</msg>
+<status status="PASS" starttime="20200923 22:38:53.621" endtime="20200923 22:38:53.659"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>4s</arg>
+</arguments>
+<msg timestamp="20200923 22:38:57.659" level="INFO">Slept 4 seconds</msg>
+<status status="PASS" starttime="20200923 22:38:53.659" endtime="20200923 22:38:57.659"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${NOMEITEM}</arg>
+</arguments>
+<assign>
+<var>${NOMEITEM_VALUE2}</var>
+</assign>
+<msg timestamp="20200923 22:38:57.699" level="INFO">${NOMEITEM_VALUE2} = Blouse</msg>
+<status status="PASS" starttime="20200923 22:38:57.660" endtime="20200923 22:38:57.699"></status>
+</kw>
+<kw name="Insert Into List" library="Collections">
+<doc>Inserts ``value`` into ``list`` to the position specified with ``index``.</doc>
+<arguments>
+<arg>${LISTACOMPRA}</arg>
+<arg>1</arg>
+<arg>${NOMEITEM_VALUE2}</arg>
+</arguments>
+<status status="PASS" starttime="20200923 22:38:57.700" endtime="20200923 22:38:57.700"></status>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>${PROCEEDTOCHECKOUT}</arg>
+</arguments>
+<msg timestamp="20200923 22:38:57.700" level="INFO">Clicking link '//a[@title='Proceed to checkout']'.</msg>
+<status status="PASS" starttime="20200923 22:38:57.700" endtime="20200923 22:38:58.736"></status>
+</kw>
+<status status="PASS" starttime="20200923 22:38:52.895" endtime="20200923 22:38:58.736"></status>
+</kw>
+<kw name="AddQtyItem2" library="Teste_Keywords">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${ADDBUTTON2}</arg>
+</arguments>
+<status status="PASS" starttime="20200923 22:38:58.737" endtime="20200923 22:38:58.748"></status>
+</kw>
+<kw name="${Qty} IN RANGE [ 2 ]" type="for">
+<kw name="${Qty} = 0" type="foritem">
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>${ADDBUTTON2}</arg>
+</arguments>
+<msg timestamp="20200923 22:38:58.748" level="INFO">Clicking link '//*[@id="cart_quantity_up_2_7_0_0"]'.</msg>
+<status status="PASS" starttime="20200923 22:38:58.748" endtime="20200923 22:38:58.785"></status>
+</kw>
+<status status="PASS" starttime="20200923 22:38:58.748" endtime="20200923 22:38:58.785"></status>
+</kw>
+<kw name="${Qty} = 1" type="foritem">
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>${ADDBUTTON2}</arg>
+</arguments>
+<msg timestamp="20200923 22:38:58.786" level="INFO">Clicking link '//*[@id="cart_quantity_up_2_7_0_0"]'.</msg>
+<status status="PASS" starttime="20200923 22:38:58.786" endtime="20200923 22:38:58.818"></status>
+</kw>
+<status status="PASS" starttime="20200923 22:38:58.786" endtime="20200923 22:38:58.818"></status>
+</kw>
+<status status="PASS" starttime="20200923 22:38:58.748" endtime="20200923 22:38:58.818"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20200923 22:39:03.818" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20200923 22:38:58.818" endtime="20200923 22:39:03.818"></status>
+</kw>
+<status status="PASS" starttime="20200923 22:38:58.736" endtime="20200923 22:39:03.818"></status>
+</kw>
+<kw name="CheckValue" library="Teste_Keywords">
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>CheckCartValue</arg>
+</arguments>
+<assign>
+<var>${CHECKFULLVALUE}</var>
+</assign>
+<kw name="CheckCartValue" library="Teste_Keywords">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${TRASHICON}</arg>
+<arg>timeout=20.0</arg>
+</arguments>
+<status status="PASS" starttime="20200923 22:39:03.819" endtime="20200923 22:39:03.828"></status>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${VALUE}</arg>
+</arguments>
+<msg timestamp="20200923 22:39:03.836" level="INFO">Current page contains element '//*[@id='total_price']//..//*[text()='$165.55']'.</msg>
+<status status="PASS" starttime="20200923 22:39:03.828" endtime="20200923 22:39:03.837"></status>
+</kw>
+<status status="PASS" starttime="20200923 22:39:03.819" endtime="20200923 22:39:03.837"></status>
+</kw>
+<msg timestamp="20200923 22:39:03.837" level="INFO">${CHECKFULLVALUE} = True</msg>
+<status status="PASS" starttime="20200923 22:39:03.819" endtime="20200923 22:39:03.837"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${CHECKFULLVALUE}'=='True'</arg>
+<arg>Run Keywords</arg>
+<arg>Capture Page Screenshot</arg>
+<arg>AND</arg>
+<arg>Log To Console</arg>
+<arg>Saldo Suficiente!</arg>
+<arg>ELSE</arg>
+<arg>Run Keywords</arg>
+<arg>Capture Page Screenshot</arg>
+<arg>AND</arg>
+<arg>Log To Console</arg>
+<arg>Saldo Insuficiente!</arg>
+</arguments>
+<kw name="Run Keywords" library="BuiltIn">
+<doc>Executes all the given keywords in a sequence.</doc>
+<arguments>
+<arg>Capture Page Screenshot</arg>
+<arg>AND</arg>
+<arg>Log To Console</arg>
+<arg>Saldo Suficiente!</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200923 22:39:04.129" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200923 22:39:03.838" endtime="20200923 22:39:04.129"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Saldo Suficiente!</arg>
+</arguments>
+<status status="PASS" starttime="20200923 22:39:04.129" endtime="20200923 22:39:04.130"></status>
+</kw>
+<status status="PASS" starttime="20200923 22:39:03.837" endtime="20200923 22:39:04.130"></status>
+</kw>
+<status status="PASS" starttime="20200923 22:39:03.837" endtime="20200923 22:39:04.130"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Item1: ${LISTACOMPRA[0]} e Item2: ${LISTACOMPRA[1]}</arg>
+</arguments>
+<msg timestamp="20200923 22:39:04.130" level="INFO">Item1: Faded Short Sleeve T-shirts e Item2: Blouse</msg>
+<status status="PASS" starttime="20200923 22:39:04.130" endtime="20200923 22:39:04.130"></status>
+</kw>
+<status status="PASS" starttime="20200923 22:39:03.818" endtime="20200923 22:39:04.130"></status>
+</kw>
+<kw name="FecharNavegador" library="Teste_Keywords">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20200923 22:39:09.132" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20200923 22:39:04.131" endtime="20200923 22:39:09.132"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200923 22:39:09.133" endtime="20200923 22:39:11.224"></status>
+</kw>
+<status status="PASS" starttime="20200923 22:39:04.131" endtime="20200923 22:39:11.224"></status>
+</kw>
+<tags>
+<tag>Teste1</tag>
+</tags>
+<status status="PASS" starttime="20200923 22:38:27.988" endtime="20200923 22:39:11.225" critical="yes"></status>
+</test>
+<doc>Suite description</doc>
+<status status="PASS" starttime="20200923 22:38:27.794" endtime="20200923 22:39:11.227"></status>
+</suite>
+<status status="PASS" starttime="20200923 22:38:27.769" endtime="20200923 22:39:11.230"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0">Teste1</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="TestSuite">TestSuite</stat>
+<stat pass="1" fail="0" id="s1-s1" name="Teste TestSuite">TestSuite.Teste TestSuite</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
